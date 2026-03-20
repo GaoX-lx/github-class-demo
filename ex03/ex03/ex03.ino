@@ -1,4 +1,4 @@
-const int ledPin = 26;
+const int ledPin = 25;
 unsigned long lastMillis = 0;
 
 // 定义SOS的节奏：状态 = {亮时间, 灭时间, 重复次数}
