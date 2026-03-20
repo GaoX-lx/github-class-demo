@@ -1,10 +1,10 @@
-const int ledPin = 2;
+const int ledPin_Y = 26;
 unsigned long lastMillis = 0; // 记录上次状态变化时间
 const long interval = 500;    // 500ms 切换一次状态 → 1Hz
 int ledState = LOW;           // 当前LED状态
 
 void setup() {
-  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin_Y, OUTPUT);
 }
 
 void loop() {
@@ -13,6 +13,6 @@ void loop() {
   if (now - lastMillis >= interval) {
     lastMillis = now;          // 更新时间记录
     ledState = !ledState;      // 翻转状态（LOW ↔ HIGH）
-    digitalWrite(ledPin, ledState);
+    digitalWrite(ledPin_Y, ledState);
   }
 }
