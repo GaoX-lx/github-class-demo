@@ -24,18 +24,18 @@ void loop() {
   for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++){   
     // 【新版用法】直接通过引脚号写入，不再需要指定通道
     ledcWrite(ledPin, dutyCycle);   
-    ledcWrite(ledPin_R, 255-dutyCycle);  
-    ledcWrite(ledPin_Y, 255-dutyCycle);   
-    ledcWrite(ledPin_G, 255-dutyCycle);   
+    ledcWrite(ledPin_R, dutyCycle);  
+    ledcWrite(ledPin_Y, dutyCycle);   
+    ledcWrite(ledPin_G, dutyCycle);   
     delay(10);
   }
 
   // 逐渐变暗
   for(int dutyCycle = 255; dutyCycle >= 0; dutyCycle--){
     ledcWrite(ledPin, dutyCycle);   
-    ledcWrite(ledPin_R, 255-dutyCycle); 
-    ledcWrite(ledPin_Y, 255-dutyCycle); 
-    ledcWrite(ledPin_G, 255-dutyCycle); 
+    ledcWrite(ledPin_R, dutyCycle); 
+    ledcWrite(ledPin_Y, dutyCycle); 
+    ledcWrite(ledPin_G, dutyCycle); 
     delay(10);
   }
   
