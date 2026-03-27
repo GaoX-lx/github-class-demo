@@ -2,6 +2,7 @@
 const int ledPin = 2;  
 const int ledPin_R = 26;  
 const int ledPin_Y = 25;
+const int ledPin_G = 33;
 
 // 设置PWM属性
 const int freq = 5000;          // 频率 5000Hz
@@ -15,6 +16,7 @@ void setup() {
   ledcAttach(ledPin, freq, resolution);
   ledcAttach(ledPin_R, freq, resolution);
   ledcAttach(ledPin_Y, freq, resolution);
+  ledcAttach(ledPin_G, freq, resolution);
 }
 
 void loop() {
@@ -24,6 +26,7 @@ void loop() {
     ledcWrite(ledPin, dutyCycle);   
     ledcWrite(ledPin_R, dutyCycle);  
     ledcWrite(ledPin_Y, dutyCycle);   
+    ledcWrite(ledPin_G, dutyCycle);
     delay(10);
   }
 
@@ -32,6 +35,7 @@ void loop() {
     ledcWrite(ledPin, dutyCycle);   
     ledcWrite(ledPin_R, dutyCycle); 
     ledcWrite(ledPin_Y, dutyCycle); 
+    ledcWrite(ledPin_G, dutyCycle);
     delay(10);
   }
   
