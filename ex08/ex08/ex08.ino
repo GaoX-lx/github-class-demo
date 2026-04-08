@@ -5,8 +5,6 @@
 const char* ssid = "gx05";
 const char* password = "13572468";
 
-
-
 WebServer server(80);
 
 #define TOUCH_PIN 4
